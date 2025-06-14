@@ -1,0 +1,34 @@
+
+### 🛠️ Quick Setup
+
+#### ⚡ One-time setup for any Linux or WSL
+
+```bash
+# 1. Install Subfinder & Gau (1-liner)
+GO111MODULE=on go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest && \
+go install github.com/lc/gau/v2/cmd/gau@latest
+
+# 2. Make sure Go's bin path is added to PATH
+echo 'export PATH=$PATH:$(go env GOPATH)/bin' >> ~/.bashrc
+source ~/.bashrc
+
+# 3. Clone and run the tool
+git clone https://github.com/Cyb3rGu4rd14n5-T/parafinder1.git
+cd parafinder1
+python3 reconx.py -u example.com -o output.txt
+```
+
+---
+
+### ▶️ Example Usage
+
+```bash
+python3 reconx.py -u nasa.gov -o nasa-findings.txt
+```
+
+
+### 📂 Output
+
+* `nasa-findings.txt` will contain detected LFI/SSRF URLs.
+* Console shows real-time status of subdomain + URL fetch + filtering.
+
