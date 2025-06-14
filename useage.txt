@@ -1,0 +1,58 @@
+
+## ⚡ ParaFinder1 — by CYBERGUARDIANS‑T
+
+An all-in-one recon and param-finding CLI tool for bug bounty hunters.
+🎯 Built-in subdomain discovery (no subfinder needed)
+🕵️ Scans for vulnerable parameters (LFI, SSRF, Open Redirect)
+🚀 Super lightweight and works instantly — no installation stress!
+
+---
+
+### 🔧 Features
+
+* ✅ No installation needed for tools like subfinder or gau
+* 🔍 Built-in subdomain finder (basic DNS ping check)
+* 🧪 Finds:
+
+  * `Open Redirect` parameters like `?url=`, `?next=`
+  * `LFI` like `?file=`, `?include=`
+  * `SSRF` like `?uri=`, `?domain=`
+* 📂 Output written to file if specified
+* 💻 Works on WSL, Kali, Ubuntu and more
+
+---
+
+### 🛠️ Setup (So Simple)
+
+```bash
+# 1. Clone the tool
+git clone https://github.com/Cyb3rGu4rd14n5-T/parafinder1.git
+cd parafinder1
+
+# 2. Run it directly
+python3 bughunter-tool.py -u example.com -o findings.txt
+```
+
+That's it! No dependencies, no Go, no subfinder, no headache.
+
+---
+
+### ▶️ Example Usage
+
+```bash
+python3 bughunter-tool.py -u nasa.gov
+```
+
+**Or save output:**
+
+```bash
+python3 bughunter-tool.py -u nasa.gov -o nasa-findings.txt
+```
+
+---
+
+### 📂 Output
+
+* Shows LFI, SSRF, and Open Redirect–suspected URLs in console
+* Optionally saves them to your file (`.txt`)
+
